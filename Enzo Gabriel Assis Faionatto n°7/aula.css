@@ -1,0 +1,120 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* Defini a fonte aqui para não precisar repetir em todas as classes */
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body{
+    background: radial-gradient(circle, #2a004d, #000000);
+    color: white;
+    min-height: 100vh;
+}
+
+/* É o cabeçalho */
+.cabecalho {
+    display: flex;
+    align-items: center;    /* Alinha a imagem no meio da altura do texto */
+    justify-content: center; /* Centraliza o bloco todo na tela */
+    gap: 20px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+
+.title-h1 {
+    color: rgb(255, 251, 251);
+    font-size: 2.2rem;
+    margin: 0; /* Removido margin-top para não desalinharem */
+}
+
+.paragrafo {
+    color: #a0a0a0;
+    font-size: 1.1rem;
+    margin-top: 5px; /* Espaço entre nome e cargo */
+    margin-bottom: 0; 
+    display: flex;
+    flex-direction: column; /* Faz o cargo ficar embaixo do nome */
+    text-align: center;
+}
+
+.imagem {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid purple;
+    object-fit: cover;
+}
+
+/* todo o conteudo que esta dentro dos cards */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background: #111;
+    color: white;
+    width: 220px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+    border: 1px solid #333;
+}
+/* faz com que quando o mouse passar em cima dos cards gere um efeito*/
+.card:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 0 15px purple;
+    border-color: purple;
+}
+
+.text-biografia {
+    color: #a0a0a0;
+    line-height: 1.6;      
+    letter-spacing: 0.2px; 
+    max-width: 800px;
+    margin: 0 auto; /* Centraliza o bloco de texto */
+    text-align: justify;
+    font-size: 0.9rem; /* Diminuir levemente a fonte ajuda a caber mais */
+    padding: 20px;
+    max-width: 700px;
+}
+/* Cria a telinha onde fica as descrições do perfil*/
+.perfil {
+    background: rgba(255, 255, 255, 0.03); /* Fundo bem sutil */
+    border: 1px  #333;               /* A borda fica dina */
+    border-left: 4px solid purple;        /* Detalhe lateral roxo */
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 600px;                     /* Não deixa o texto ficar bagunçado */
+    margin: 30px auto;                    /* Centraliza na tela */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.perfil p {
+    color: #d1d1d1;
+    font-size: 0.95rem; /* É tipo o px so que melhora a acessibilidade*/
+    line-height: 1.8;
+    margin: 10px ;
+    font-family: system-ui, -apple-system, sans-serif;
+}
+
+/* Vai mudar a cor do strong*/
+.perfil strong {
+    color: purple; 
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+.linha-divisora {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(to right, #333, transparent); /* A linha faz um degrade obs: peguei no chat */
+    margin: 5px 0;
+}
+
